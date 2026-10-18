@@ -339,3 +339,13 @@ input::placeholder { color: #737d94; }
   html { scroll-behavior: auto; }
   *, *::before, *::after { transition: none !important; }
 }
+
+/* ЛР5: три локальные фотографии и адаптивные карточки. */
+.photo-intro { max-width: 720px; margin-top: 20px; }
+.photo-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; margin-top: 32px; }
+.photo-card { margin: 0; overflow: hidden; border: 1px solid var(--border); border-radius: var(--radius); background: var(--surface); }
+.photo-card img { display: block; width: 100%; height: auto; aspect-ratio: 3 / 2; object-fit: cover; }
+.photo-card figcaption { padding: 24px; }
+.photo-card p { margin-top: 12px; }
+.photo-credit { margin-top: 20px; font-size: .85rem; }
+@media (max-width: 780px) { .photo-grid { grid-template-columns: 1fr; } }
